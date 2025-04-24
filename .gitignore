@@ -1,0 +1,19 @@
+# Виртуальное окружение
+venv/
+
+# Папки и файлы, генерыруемые IDE
+.idea/
+*.pyc
+__pycache__/
+
+# Другие игнорируемые файлы
+confirmation_xls/
+labels_pdf/
+orders_dbf/
+recaps_xlsx/
+settings.py
+test.py
+*.xlsx
+*.xls
+*.log
+*.dbf
