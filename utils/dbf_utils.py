@@ -1,6 +1,7 @@
 import dbf
 
 from logging_config import *
+from settings import STORE
 from utils.dates import parse_date
 from utils.ftp_utils import upload_file_to_ftp
 
@@ -38,7 +39,7 @@ def export_orders_to_dbf_files(orders, output_dir, customer_id, division_id, ftp
                 str(order_id),
                 order_date,
                 shipment_date,
-                f'{order_id} Заказ YANDEX Frenchpharmacy',
+                f'{order_id} Заказ YANDEX {STORE}',
                 str(customer_id),
                 str(division_id)
             ))

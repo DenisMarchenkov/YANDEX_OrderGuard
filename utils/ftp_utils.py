@@ -1,10 +1,11 @@
 import ftplib
 import time
 from logging_config import *
+from settings import STORE
 
 
 def download_from_ftp(server, username, password, local_directory, division_id, max_retries=3, retry_delay=5):
-    remote_directory = "/OZON_orders/Frenchpharmacy/Confirmations"
+    remote_directory = f"/OZON_orders/{STORE}/Confirmations"
     attempt = 0
 
     while attempt < max_retries:

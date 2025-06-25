@@ -1,7 +1,7 @@
 import shutil
 import pandas as pd
 from datetime import datetime
-from settings import CONFIRMATION_PROCESSED, CONFIRMATION_REFUSED
+from settings import CONFIRMATION_PROCESSED, CONFIRMATION_REFUSED, STORE_SUFFIX
 from utils.excel_formatting import format_report_sheets
 from logging_config import *
 
@@ -91,5 +91,5 @@ def save_orders_to_excel(dataframe, output_path):
 
 def handle_report(df, recaps_dir):
     report_file_path = save_orders_to_excel(df, recaps_dir)
-    format_report_sheets(report_file_path, 'FF')
+    format_report_sheets(report_file_path, STORE_SUFFIX)
     return report_file_path

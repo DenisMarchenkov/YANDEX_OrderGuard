@@ -28,7 +28,7 @@ def main():
             labels_file_path = handle_labels(confirmations_df, BUSINESS_ID, HEADERS, STICKERS_DIR)
 
             # 5. Статусы
-            # handle_status_update(confirmations_df, CAMPAIGN_ID, HEADERS)
+            handle_status_update(confirmations_df, CAMPAIGN_ID, HEADERS)
 
             # 6. Отправка отчета и наклеек по почте
             if report_file_path or labels_file_path:
